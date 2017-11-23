@@ -29,7 +29,9 @@
     "bi-service": "^1.0.0-dev.20171123"
   },
   "dependencies": {
-    "lodash": "^4.16.2"
+    "lodash": "^4.16.2",
+    "file-type": "^7.3.0"
+
   },
   "devDependencies": {
     "bi-service": "^1.0.0-dev.20171123",
