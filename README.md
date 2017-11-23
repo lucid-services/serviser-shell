@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/BohemiaInteractive/bi-service-shell.svg?branch=master)](https://travis-ci.org/BohemiaInteractive/bi-service-shell)   
 
-Implementation of `bi-service`'s' `AppInterface` which brings user-defined shell commands to your `bi-service` based project.
+Implementation of `bi-service`'s `AppInterface` which brings user-defined shell commands to your `bi-service` based project.
 
 ### Usage
 
