@@ -10,9 +10,13 @@ Load the pluging at the bottom of your `index.js` file:
 require('bi-service-shell'); //loads the plugin
 ```
 
+Initialize a shell `App` in your `app.js` file:
 ```javascript
 service.appManager.buildShellApp('your-app-name-in-config.json5');
+```
 
+##### An example command definition:
+```javascript
 const router = service.appManager
     .get('your-app-name-in-config.json5')
     .buildRouter({
@@ -49,7 +53,7 @@ route.main(function(req, res) {
 });
 ```
 
-Now the above command will be available through `bi-service` executable:
+Now the above command will be available through the `bi-service` executable:
 
 ```bash
 project/root> ./node_modules/.bin/bi-service
