@@ -1,4 +1,8 @@
 
+## v0.2.0
+
+* [CHANGED] - `Route` constructor aka. a command definition object does not accept the Route `type` option
+
 ## v0.1.2  
 ## v0.1.1  
 

@@ -4,7 +4,7 @@ Implementation of `bi-service`'s `AppInterface` which brings user-defined shell 
 
 ### Usage
 
-Load the pluging at the bottom of your `index.js` file:
+Load the plugin at the bottom of your `index.js` file:
 
 ```javascript
 require('bi-service-shell'); //loads the plugin
@@ -12,7 +12,7 @@ require('bi-service-shell'); //loads the plugin
 
 Initialize a shell `App` in your `app.js` file:
 ```javascript
-service.appManager.buildShellApp('your-app-name-in-config.json5');
+service.buildShellApp('your-app-name-in-config.json5');
 ```
 
 ##### An example command definition:
