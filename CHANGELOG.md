@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.2.0
 
 * [CHANGED] - `Route` constructor aka. a command definition object does not accept the Route `type` option
 
