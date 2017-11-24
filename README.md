@@ -12,7 +12,7 @@ require('bi-service-shell'); //loads the plugin
 
 Initialize a shell `App` in your `app.js` file:
 ```javascript
-service.appManager.buildShellApp('your-app-name-in-config.json5');
+service.buildShellApp('your-app-name-in-config.json5');
 ```
 
 ##### An example command definition:
