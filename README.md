@@ -4,7 +4,7 @@ Implementation of `bi-service`'s `AppInterface` which brings user-defined shell 
 
 ### Usage
 
-Load the pluging at the bottom of your `index.js` file:
+Load the plugin at the bottom of your `index.js` file:
 
 ```javascript
 require('bi-service-shell'); //loads the plugin
