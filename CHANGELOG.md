@@ -1,4 +1,8 @@
 
+## FUTURE
+
+* [FIXED] - shell command `default` value option definition didn't allow falsy values to be set eg. `null`, `false` etc..
+
 ## v0.2.0
 
 * [CHANGED] - `Route` constructor aka. a command definition object does not accept the Route `type` option
