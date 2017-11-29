@@ -11,8 +11,8 @@ describe('CLI', function() {
     before(function() {
         const sampleAppPath = path.resolve(__dirname + '/../sample');
         const self = this;
-        tmp.setGracefulCleanup();
-        this.tmpDir = tmp.dirSync({unsafeCleanup: true});
+        //tmp.setGracefulCleanup();
+        this.tmpDir = tmp.dirSync({unsafecleanup: false});
         this.spawn = spawn;
 
         return fs.copy(sampleAppPath, this.tmpDir.name).then(function() {
@@ -47,7 +47,7 @@ describe('CLI', function() {
         });
     });
 
-    it.skip('should return json response according to defined schema', function() {
+    it('should return json response according to defined schema', function() {
         const result = this.spawn([':response:filter']);
 
         result.stderr.toString().should.be.equal('');
@@ -55,7 +55,6 @@ describe('CLI', function() {
         JSON.parse(result.stdout.toString()).should.be.eql({
             username: 'test',
             email: 'test@test.com',
-            age: 8
         });
     });
 
@@ -77,6 +76,23 @@ describe('CLI', function() {
         JSON.parse(result.stdout.toString()).should.be.eql(data);
     });
 
+    it('should respond with error formated as valid json when stdin is not valid json', function() {
+        const result = this.spawn(
+            [':parse:stdin:json'],
+            'invalid json input'
+        );
+
+        result.status.should.be.equal(1);
+        JSON.parse(result.stdout.toString()).should.be.eql({
+            api_code: null,
+            code: 500,
+            message: 'Internal Server Error',
+            context: {
+                message: 'Unexpected token i in JSON at position 0'
+            }
+        });
+    });
+
     it('should redirect stdin to stdout', function() {
         const image = fs.readFileSync(path.resolve(__dirname + '/../test.png'));
         const result = this.spawn(
@@ -87,5 +103,67 @@ describe('CLI', function() {
         result.stderr.toString().should.be.equal('');
         result.status.should.be.equal(0);
         result.stdout.toString('hex').should.be.equal(image.toString('hex'));
+    });
+
+    it('should respond with error formated as valid json when stdin is not valid png image', function() {
+        const result = this.spawn(
+            [':parse:stdin:png'],
+            'invalid stdin input'
+        );
+
+        result.status.should.be.equal(1);
+        JSON.parse(result.stdout.toString()).should.be.eql({
+            api_code: null,
+            uid: null,
+            code: 400,
+            message: 'Unsupported stdin Content-Type: text/plain. Supported: image/png',
+        });
+    });
+
+    it('should respond with parsed shell command arguments', function() {
+        const data = {
+            username: 'test',
+            email: 'test@test.com'
+        };
+
+        const result = this.spawn(
+            [
+                ':validate:args',
+                '--username',
+                data.username,
+                '--email',
+                data.email
+            ]
+        );
+
+        result.stderr.toString().should.be.equal('');
+        result.status.should.be.equal(0);
+        JSON.parse(result.stdout.toString()).should.be.eql(data);
+    });
+
+    it('should respond with json error response when invalid email argument value is provided', function() {
+        const data = {
+            username: 'test',
+            email: 'test'
+        };
+
+        const result = this.spawn(
+            [
+                ':validate:args',
+                '--username',
+                data.username,
+                '--email',
+                data.email
+            ]
+        );
+
+        result.stderr.toString().should.be.equal('');
+        result.status.should.be.equal(1);
+        JSON.parse(result.stdout.toString()).should.be.eql({
+            api_code: null,
+            uid: null,
+            code: 400,
+            message: '.email should match format "email"',
+        });
     });
 });
