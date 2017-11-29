@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.2.2
 
 * [FIXED] `res` object provided to a `route` should directly expose writable stream API
 * [FIXED] process exit code is always set to `1` on error
