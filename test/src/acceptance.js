@@ -11,8 +11,8 @@ describe('CLI', function() {
     before(function() {
         const sampleAppPath = path.resolve(__dirname + '/../sample');
         const self = this;
-        //tmp.setGracefulCleanup();
-        this.tmpDir = tmp.dirSync({unsafecleanup: false});
+        tmp.setGracefulCleanup();
+        this.tmpDir = tmp.dirSync({unsafeCleanup: true});
         this.spawn = spawn;
 
         return fs.copy(sampleAppPath, this.tmpDir.name).then(function() {
