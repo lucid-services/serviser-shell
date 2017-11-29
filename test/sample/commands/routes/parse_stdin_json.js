@@ -4,8 +4,8 @@ const router = require('../router.js');
 const Promise = require('bluebird');
 
 const route = router.buildRoute({
-    url : 'parse:stdin',
-    summary: 'parses and validas stdin'
+    url : 'parse:stdin:json',
+    summary: 'parses stdin json input'
 });
 
 route.acceptsContentType('text/plain', {}, function(req) {
@@ -32,5 +32,5 @@ route.acceptsContentType('text/plain', {}, function(req) {
 });
 
 route.main(function (req, res) {
-    res.json(res.body);
+    res.json(req.body);
 });
