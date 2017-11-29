@@ -21,26 +21,27 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec false -t 5000 'test/**/*.js'",
-    "tests": "mocha --ui bdd --colors --check-leaks -t 5000 --reporter spec --parse-pos-args false 'test/**/*.js'",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec false -t 30000 'test/src/**/*.js'",
+    "tests": "mocha --ui bdd --colors --check-leaks -t 30000 --reporter spec 'test/src/**/*.js'",
     "test": "npm run tests"
   },
   "peerDependencies": {
-    "bi-service": "^1.0.0-dev.20171123"
+    "bi-service": "^1.0.0-dev.20171127"
   },
   "dependencies": {
     "lodash": "^4.16.2",
     "file-type": "^7.3.0"
-
   },
   "devDependencies": {
-    "bi-service": "^1.0.0-dev.20171123",
+    "bi-service": "^1.0.0-dev.20171127",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
+    "fs-extra": "^4.0.2",
     "istanbul": "^0.4.3",
     "mocha": "^2.5.3",
     "sinon": "^1.17.3",
     "sinon-as-promised": "^4.0.0",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "tmp": "0.0.29"
   }
 }

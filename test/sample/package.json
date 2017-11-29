@@ -1,0 +1,12 @@
+{
+  "name": "bi-shell-test-case",
+  "version": "0.0.0",
+  "description": "test case",
+  "author": "Bohemia Interactive",
+  "private": true,
+  "files": [],
+  "dependencies": {
+    "bi-service-shell": "^0.2.0",
+    "bi-service": "^1.0.0-dev.20171127"
+  }
+}
