@@ -1,4 +1,9 @@
 
+## v0.2.2
+
+* [FIXED] `res` object provided to a `route` should directly expose writable stream API
+* [FIXED] process exit code is always set to `1` on error
+
 ## v0.2.1
 
 * [FIXED] - shell command `default` value option definition didn't allow falsy values to be set eg. `null`, `false` etc..
