@@ -2,6 +2,7 @@
 ## FUTURE
 
 * [FIXED] - shell command `default` value option definition didn't allow falsy values to be set eg. `null`, `false` etc..
+* [FIXED] - bind custom methods (which comes with bi-service) to `res` object
 
 ## v0.2.0
 
