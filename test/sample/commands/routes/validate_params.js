@@ -9,6 +9,7 @@ const route = router.buildRoute({
 
 route.validate({
     required: ['email'],
+    additionalProperties: false,
     properties: {
         username: {
             type: ['string', 'null'],
@@ -16,6 +17,7 @@ route.validate({
         },
         email: {
             type: 'string',
+            format: 'email',
             $desc: 'email'
         },
     }

@@ -1,4 +1,6 @@
 
+## v0.2.3
+
 ## v0.2.2
 
 * [FIXED] `res` object provided to a `route` should directly expose writable stream API
