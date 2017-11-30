@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/BohemiaInteractive/bi-service-shell.svg?branch=master)](https://travis-ci.org/BohemiaInteractive/bi-service-shell)
 
-Implementation of `bi-service`'s `AppInterface` which brings user-defined shell commands to your `bi-service` based project.
+Implementation of `bi-service` `AppInterface`.  
+Create command line applications with `bi-service` framework.
 
 ### Usage
 
@@ -34,7 +35,7 @@ route.acceptsContentType('image/png');
 route.validate({
     properties: {
         title: {
-            type: ['string', 'null'],
+            type: ['string'],
             $desc: 'Image title'
         }
     }
@@ -44,12 +45,7 @@ route.main(function(req, res) {
     const remoteResource = new AmazonResource(req.params);
 
     remoteResource.setEncoding('utf8');
-    remoteResource.once('data', function(url) {
-        res.end(url);
-    });
-
-    req.resume();
-    req.pipe(remoteResource);
+    req.pipe(remoteResource).pipe(res);
 });
 ```
 
