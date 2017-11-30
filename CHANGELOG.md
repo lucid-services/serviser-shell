@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.2.4
 
 * [FIXED] `App` interface implementation inconsistency - app status should be set to `OK` when sucessfully initialized
 
