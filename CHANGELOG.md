@@ -1,4 +1,8 @@
 
+## v0.2.5
+
+* [FIXED] process.stdin does not have the `close` method thus a shell `App` should come with its own implementation of `app.close()`
+
 ## v0.2.4
 
 * [FIXED] `App` interface implementation inconsistency - app status should be set to `OK` when sucessfully initialized
