@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.2.5
 
 * [FIXED] process.stdin does not have the `close` method thus a shell `App` should come with its own implementation of `app.close()`
 
