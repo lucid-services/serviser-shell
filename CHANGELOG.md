@@ -1,4 +1,8 @@
 
+## FUTURE
+
+* [ADDED] Shell app's `config` resource is assigned `shell` tag to conform with new bi-service@1.0.0 API
+
 ## v0.2.5
 
 * [FIXED] process.stdin does not have the `close` method thus a shell `App` should come with its own implementation of `app.close()`
