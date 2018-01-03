@@ -6,7 +6,7 @@
   "private": true,
   "files": [],
   "dependencies": {
-    "bi-service-shell": "^0.2.0",
-    "bi-service": "^1.0.0-dev.20171127"
+    "bi-service-shell": "dev",
+    "bi-service": "dev"
   }
 }
