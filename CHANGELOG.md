@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.3.0
 
 * [ADDED] Shell app's `config` resource is assigned `shell` tag to conform with new bi-service@1.0.0 API
 
