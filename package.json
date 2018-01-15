@@ -1,6 +1,6 @@
 {
   "name": "bi-service-shell",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "The plugin provides an implementation of bi-service `AppInterface` which brings user-defined shell commands.",
   "main": "index.js",
   "testFramework": "mocha",
