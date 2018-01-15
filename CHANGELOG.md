@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.3.1
 
 * [FIXED] failure of a command CLI interface generation from defined `Route` parameters
 
