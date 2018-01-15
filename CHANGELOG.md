@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.3.2
 
 * [FIXED] defined `Route` parameters were not being listed in cli `--help` commnad response
 
