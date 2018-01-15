@@ -10,10 +10,12 @@ service.buildShellApp('shell', {
     validator: {
         schemas: {
             first_name: {
-                type: 'string'
+                type: 'string',
+                $desc: 'first_name'
             },
             last_name: {
-                type: 'string'
+                type: 'string',
+                $desc: 'last_name'
             },
             personal: {
                 type: 'object',

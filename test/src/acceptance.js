@@ -166,4 +166,30 @@ describe('CLI', function() {
             message: '.email should match format "email"',
         });
     });
+
+    it('should print available command parameters', function() {
+
+        const result = this.spawn(
+            [
+                ':validate:args',
+                '--help',
+            ]
+        );
+
+        result.stderr.toString().should.be.equal('');
+        result.status.should.be.equal(0);
+        result.stdout.toString().should.be.equal(
+            'node_modules/.bin/bi-service :validate:args\n' +
+            '\n' +
+            'Options:\n' +
+            '  --help, -h    Show help  [boolean]\n' +
+            '  --config      Custom config file destination  [string]\n' +
+            '  --version     Prints bi-service version  [boolean]\n' +
+            '  --username    username\n' +
+            '  --email       email  [string] [required]\n' +
+            '  --first_name  first_name  [string]\n' +
+            '  --last_name   last_name  [string]\n' +
+            '\n'
+        );
+    });
 });
