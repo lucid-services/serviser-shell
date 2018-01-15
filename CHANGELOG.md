@@ -1,4 +1,8 @@
 
+## v0.3.2
+
+* [FIXED] defined `Route` parameters were not being listed in cli `--help` commnad response
+
 ## v0.3.1
 
 * [FIXED] failure of a command CLI interface generation from defined `Route` parameters
