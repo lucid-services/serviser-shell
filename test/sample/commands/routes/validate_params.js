@@ -23,6 +23,8 @@ route.validate({
     }
 }, 'params');
 
+route.validate('personal', 'params');
+
 route.main(function (req, res) {
     res.json(req.params);
 });

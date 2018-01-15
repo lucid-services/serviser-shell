@@ -6,7 +6,25 @@ const service = require('./index.js');
 module.exports = service.appManager;
 exports.appManager = service.appManager;
 
-service.buildShellApp('shell');
+service.buildShellApp('shell', {
+    validator: {
+        schemas: {
+            first_name: {
+                type: 'string'
+            },
+            last_name: {
+                type: 'string'
+            },
+            personal: {
+                type: 'object',
+                properties: {
+                    first_name: {$ref: 'first_name'},
+                    last_name: {$ref: 'last_name'},
+                }
+            }
+        }
+    }
+});
 
 moduleLoader.loadModules([
     __dirname + '/commands',
