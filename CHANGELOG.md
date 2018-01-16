@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.4.0
 
 * [ADDED] `Router.prototype.reflectHtppRoute` method
 
