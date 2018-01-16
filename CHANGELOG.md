@@ -1,4 +1,8 @@
 
+## FUTURE
+
+* [FIXED] broken TTY pipe detection
+
 ## v0.4.0
 
 * [ADDED] `Router.prototype.reflectHtppRoute` method
