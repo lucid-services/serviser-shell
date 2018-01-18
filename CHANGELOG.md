@@ -1,4 +1,8 @@
 
+## FUTURE
+
+* [FIXED] don't use TTY detection to determine whether the `stdin` stream what piped to (as it doesn't work when TTY is not attached)
+
 ## v0.4.1
 
 * [FIXED] broken TTY pipe detection
