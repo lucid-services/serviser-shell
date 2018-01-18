@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.4.2
 
 * [FIXED] don't use TTY detection to determine whether the `stdin` stream what piped to (as it doesn't work when TTY is not attached)
 
