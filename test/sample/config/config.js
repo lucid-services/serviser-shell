@@ -1,4 +1,4 @@
-{
+module.exports = {
     apps: {
         shell: {
             baseUrl: 'http://127.0.0.1',
@@ -14,4 +14,4 @@
             }
         ]
     }
-}
+};
