@@ -1,12 +1,12 @@
 {
-  "name": "bi-shell-test-case",
+  "name": "serviser-shell-test-case",
   "version": "0.0.0",
   "description": "test case",
-  "author": "Bohemia Interactive",
+  "author": "fogine",
   "private": true,
   "files": [],
   "dependencies": {
-    "bi-service-shell": "dev",
-    "bi-service": "dev"
+    "serviser-shell": "dev",
+    "serviser": "latest"
   }
 }

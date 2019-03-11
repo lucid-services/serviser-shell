@@ -1,12 +1,12 @@
 {
-  "name": "bi-service-shell",
-  "version": "0.4.2",
-  "description": "The plugin provides an implementation of bi-service `AppInterface` which brings user-defined shell commands.",
+  "name": "serviser-shell",
+  "version": "0.4.3",
+  "description": "The plugin provides an implementation of serviser `AppInterface` which brings user-defined shell commands.",
   "main": "index.js",
   "testFramework": "mocha",
-  "author": "Bohemia Interactive",
+  "author": "fogine",
   "contributors": [
-    "fogine <TODO>"
+    "fogine"
   ],
   "private": false,
   "engines": {
@@ -26,14 +26,14 @@
     "test": "npm run tests"
   },
   "peerDependencies": {
-    "bi-service": "^1.0.0"
+    "serviser": "^2.0.0"
   },
   "dependencies": {
     "lodash": "^4.16.2",
     "file-type": "^7.3.0"
   },
   "devDependencies": {
-    "bi-service": "^1.0.0",
+    "serviser": "^2.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "fs-extra": "^4.0.2",

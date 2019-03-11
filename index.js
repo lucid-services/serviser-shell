@@ -1,5 +1,5 @@
 const _        = require('lodash');
-const service  = require('bi-service');
+const service  = require('serviser');
 const App      = require('./lib/app.js');
 const Router   = require('./lib/router.js');
 const Route    = require('./lib/route.js');

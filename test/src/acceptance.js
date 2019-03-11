@@ -21,7 +21,7 @@ describe('CLI', function() {
 
         function spawn(args, stdin) {
             return childProcess.spawnSync(
-                `./node_modules/.bin/bi-service`,
+                `./node_modules/.bin/serviser`,
                 args,
                 {
                     cwd: self.tmpDir.name,
@@ -160,7 +160,7 @@ describe('CLI', function() {
         result.stderr.toString().should.be.equal('');
         result.status.should.be.equal(1);
         JSON.parse(result.stdout.toString()).should.be.eql({
-            api_code: null,
+            api_code: 'validationFailure',
             uid: null,
             code: 400,
             message: '.email should match format "email"',
@@ -179,12 +179,12 @@ describe('CLI', function() {
         result.stderr.toString().should.be.equal('');
         result.status.should.be.equal(0);
         result.stdout.toString().should.be.equal(
-            'node_modules/.bin/bi-service :validate:args\n' +
+            'node_modules/.bin/serviser :validate:args\n' +
             '\n' +
             'Options:\n' +
             '  --help, -h    Show help  [boolean]\n' +
             '  --config      Custom config file destination  [string]\n' +
-            '  --version     Prints bi-service version  [boolean]\n' +
+            '  --version     Prints serviser version  [boolean]\n' +
             '  --username    username\n' +
             '  --email       email  [string] [required]\n' +
             '  --first_name  first_name  [string]\n' +
